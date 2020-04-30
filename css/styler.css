@@ -80,3 +80,8 @@ select {
     border-radius: 10px;
 }
 
+.modal-body {
+    text-align: center;
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
+}
