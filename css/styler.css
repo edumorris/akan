@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body {
+    background-color: #746a95;
+}
+
+.container h1 {
+    text-align: center;
+}
+
+.container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.jumbotron {
+    margin-top: 40px;
+}
+
+.about {
+    font-size: 1.5em;
+    font-family: "Roboto", sans-serif;
+}
+
+#input_form {
+    display: flex;
+    margin: 30px auto;
+    justify-content: center;
+}
+
+form {
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 25px;
+    font-family: "Roboto", sans-serif;
+}
+
+td[colspan="2"] {
+    text-align: center;
+}
+
+[type="text"],
+select {
+    box-sizing: border-box;
+    width: 300px;
+}
+
+[type="text"], select, [type="number"] {
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#dayOfBirth, #monthOfBirth, #yearOfBirth {
+    box-sizing: border-box;
+}
+
+#dayOfBirth {
+    width: 75px;
+}
+
+#monthOfBirth {
+    width: 75px;
+}
+
+#yearOfBirth {
+    width: 140px;
+}
+
+.form_left {
+    width: 150px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+[type="submit"], [type="button"] {
+    position: relative;
+    align-self: center;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
