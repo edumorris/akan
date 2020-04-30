@@ -11,3 +11,19 @@ function viewInputs() {
 
     return userData; //All input from the form can be accessed through this array.
 }
+
+function dayValidator() {
+    var dayBirth = document.getElementById("dayOfBirth").value;
+    if (dayBirth < 1 || dayBirth > 31) {
+        alert("Enter a valid day");
+        document.getElementById("dayOfBirth").focus();
+    }
+}
+
+function monthValidator() {
+    var monthBirth = document.getElementById("monthOfBirth").value;
+    if (monthBirth < 1 || monthBirth > 12) {
+        alert("Enter a valid month");
+        document.getElementById("monthOfBirth").focus();
+    }
+}
