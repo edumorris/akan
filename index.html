@@ -28,7 +28,15 @@
                 details below and the program shall do the rest.</p>
             <hr>
             <div id="input_form" d-flex justify-content-center>
-                <form>
+                <form id="userInputForm" onsubmit="openModal()">
+
+                    <script>
+                        $('#userInputForm').on('submit', function (e) {
+                            $('#akanPopUp').modal('show');
+                            e.preventDefault();
+                        });
+                    </script>
+
                     <table>
                         <tr>
                             <td colspan="2">
@@ -82,6 +90,31 @@
                         </tr>
                     </table>
                 </form>
+            </div>
+        </div>
+        <hr>
+
+        <div class="modal" id="akanPopUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-center" id="exampleModalLabel" style="font-size: 2em;">Akan Name
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="greeting"></div>
+                        <div id="dob"></div>
+                        <div id="akan_name"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                            onclick="clearForm()">Close</button>
+                    </div>
+                </div>
             </div>
         </div>
 

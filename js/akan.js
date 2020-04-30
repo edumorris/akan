@@ -133,3 +133,24 @@ function akanNameAssigner() {
 
     return akanName;
 }
+
+function displayer() {
+    var userData = viewInputs();
+    var userDates = akanCalculator();
+    var assignedName = akanNameAssigner();
+
+    var userName = userData[0];
+    var userDateOfBirth = userDates[0];
+
+    var greets = "Hello " + "<strong>" + userName + "</strong>";
+    var dateConfirm = "Your were born on: " + userDateOfBirth;
+    var akan = "Your Akan Name is: " + "<strong>" + assignedName + "</strong>";
+
+    document.getElementById("greeting").innerHTML = greets;
+    document.getElementById("dob").innerHTML = dateConfirm;
+    document.getElementById("akan_name").innerHTML = akan;
+}
+
+function clearForm() {
+    document.getElementById("userInputForm").reset();
+}
