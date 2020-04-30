@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Akan Names</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!--Personal CSS-->
+    <link rel="stylesheet" type="text/css" href="css/styler.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="jumbotron">
+            <h1 class="display-3">Akan Names</h1>
+            <p class="lead">The Akan people of Ghana frequently name their children after the day of the week they were
+                born and the order in which they were born. These "day names" have further meanings concerning the soul
+                and character of the person.</p>
+            <hr class="my-2">
+            <p class="text-center about">This program shall tell you what your Akan name would be. Kindly enter your
+                details below and the program shall do the rest.</p>
+            <hr>
+            <div id="input_form" d-flex justify-content-center>
+                <form>
+                    <table>
+                        <tr>
+                            <td colspan="2">
+                                <h2>Enter Details Below</h2>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="form_left">
+                                <label for="userName">Name:</label>
+                            </td>
+                            <td class="form_right">
+                                <input type="text" name="user_name" id="userName" placeholder="Enter your name here"
+                                    required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="form_left">
+                                <label for="userGender">Gender:</label>
+                            </td>
+                            <td class="form_right">
+                                <select id="userGender" name="user_gender" required>
+                                    <option selected disabled style="color: grey; font-style: italic;">Choose a gender
+                                    </option>
+                                    <option value="female">Female</option>
+                                    <option value="male">Male</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="form_left">
+                                <label for="Date of Birth">Date of Birth:</label>
+                            </td>
+                            ,<script src="js/akan.js"></script>
+                            <td class="form_right" id="date_input">
+                                <input type="text" name="Date of Birth" id="dayOfBirth" placeholder="dd"
+                                    onchange="dayValidator()" required>
+                                <input type="text" name="Date of Birth" id="monthOfBirth" placeholder="mm"
+                                    onchange="monthValidator()" required>
+                                <input type="text" name="Date of Birth" id="yearOfBirth" placeholder="yyyy" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <div class="text-center">
+                                <td colspan="2">
+                                    <input class="btn btn-primary" type="submit" name="submit" value="View Akan Name"
+                                        id="submit_button" onclick="displayer()">
+                                </td>
+                                <td></td>
+                            </div>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
