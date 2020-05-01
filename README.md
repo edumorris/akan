@@ -14,8 +14,14 @@ No setup required
 The final program should have a form that users can interact with to input their required data and return the Akan name depending on when the user was born.
 
 # Technologies Used
+### HTML
+### CSS
+### Bootstrap
+### JavaScript
+### JQuery
 
 # Live URL
+[Akan Name Generator](https://edumorris.github.io/akan)
 
 # Contact Information
 eduuwachira@gmail.com
