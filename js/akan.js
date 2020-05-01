@@ -8,8 +8,8 @@ function viewInputs() {
     var dateOfBirth = dayBirth + "/" + monthBirth + "/" + yearBirth;
 
     var userData = [uName, uGender, dayBirth, monthBirth, yearBirth];
-
-    return userData; //All input from the form can be accessed through this array.
+    
+    return userData;  //All input from the form can be accessed through this array.
 }
 
 function dayValidator() {
@@ -29,128 +29,134 @@ function monthValidator() {
 }
 
 function akanCalculator() {
-    var userData = viewInputs();
+	var userData = viewInputs();
 
-    var yearOB = userData[4];
-    var monthOB = userData[3];
-    var dateOB = userData[2];
+	var yearOB = userData[4];
+	var monthOB = userData[3];
+	var dateOB = userData[2];
 
-    var bornDate = yearOB + "-" + monthOB + "-" + dateOB;
+	var bornDate = yearOB + "-" + monthOB + "-" + dateOB;
 
-    /*
-    	Function accessed from StackOverflow url(https://stackoverflow.com/questions/5619202/converting-a-string-to-a-date-in-javascript)
+	/*
+		Function accessed from StackOverflow url(https://stackoverflow.com/questions/5619202/converting-a-string-to-a-date-in-javascript)
 
-    */
+	*/
 
-    var parts = bornDate.split('-');
-    // Please pay attention to the month (parts[1]); JavaScript counts months from 0:
-    // January - 0, February - 1, etc.
-    var mydate = new Date(parts[0], parts[1] - 1, parts[2]);
-    var myDateStr = mydate.toDateString();
+	var parts =bornDate.split('-');
+	// Please pay attention to the month (parts[1]); JavaScript counts months from 0:
+	// January - 0, February - 1, etc.
+	var mydate = new Date(parts[0], parts[1] - 1, parts[2]); 
+	var myDateStr = mydate.toDateString();
 
-    var dayOfWeek = myDateStr.slice(0, 3); //Returns day of the week
+	var dayOfWeek = myDateStr.slice(0, 3);  //Returns day of the week
 
-    var dateData = [myDateStr, dayOfWeek];
-    return dateData;
+	var dateData = [myDateStr, dayOfWeek];
+	return dateData;
 }
 
 function akanNameAssigner() {
-    var dateData = akanCalculator();
-    var dayData = dateData[1];
-    var userData = viewInputs();
+	var dateData = akanCalculator();
+	var dayData = dateData[1];
+	var userData = viewInputs();
 
-    var userGend = userData[1];
+	var userGend = userData[1];
 
-    var maleAkanNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
-    var femaleAkanNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
+	var maleAkanNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
+	var femaleAkanNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
 
-    var akanName;
+	var akanName;
 
-    if (userGend == "female") {
-        switch (dayData) {
-            case "Sun":
-                akanName = femaleAkanNames[0];
-                break;
+	if(userGend == "female") {
+		switch(dayData) {
+			case "Sun":
+				akanName = femaleAkanNames[0];
+				break;
 
-            case "Mon":
-                akanName = femaleAkanNames[1];
-                break;
+			case "Mon":
+				akanName = femaleAkanNames[1];
+				break;
 
-            case "Tue":
-                akanName = femaleAkanNames[2];
-                break;
+			case "Tue":
+				akanName = femaleAkanNames[2];
+				break;
 
-            case "Wed":
-                akanName = femaleAkanNames[3];
-                break;
+			case "Wed":
+				akanName = femaleAkanNames[3];
+				break;
 
-            case "Thu":
-                akanName = femaleAkanNames[4];
-                break;
+			case "Thu":
+				akanName = femaleAkanNames[4];
+				break;
 
-            case "Fri":
-                akanName = femaleAkanNames[5];
-                break;
+			case "Fri":
+				akanName = femaleAkanNames[5];
+				break;
 
-            case "Sat":
-                akanName = femaleAkanNames[6];
-                break;
-        }
-    } else if (userGend == "male") {
-        switch (dayData) {
-            case "Sun":
-                akanName = maleAkanNames[0];
-                break;
+			case "Sat":
+				akanName = femaleAkanNames[6];
+				break;
+		}
+	}
 
-            case "Mon":
-                akanName = maleAkanNames[1];
-                break;
+	else if(userGend == "male") {
+		switch(dayData) {
+			case "Sun":
+				akanName = maleAkanNames[0];
+				break;
 
-            case "Tue":
-                akanName = maleAkanNames[2];
-                break;
+			case "Mon":
+				akanName = maleAkanNames[1];
+				break;
 
-            case "Wed":
-                akanName = maleAkanNames[3];
-                break;
+			case "Tue":
+				akanName = maleAkanNames[2];
+				break;
 
-            case "Thu":
-                akanName = maleAkanNames[4];
-                break;
+			case "Wed":
+				akanName = maleAkanNames[3];
+				break;
 
-            case "Fri":
-                akanName = maleAkanNames[5];
-                break;
+			case "Thu":
+				akanName = maleAkanNames[4];
+				break;
 
-            case "Sat":
-                akanName = maleAkanNames[6];
-                break;
-        }
-    } else {
-        alert("Kindly selected your gender!");
-        document.getElementById("userGender").focus();
-    }
+			case "Fri":
+				akanName = maleAkanNames[5];
+				break;
 
-    return akanName;
+			case "Sat":
+				akanName = maleAkanNames[6];
+				break;
+		}
+	}
+
+	else {
+		alert("Kindly selected your gender!");
+		document.getElementById("userGender").focus();
+	}
+	
+	return akanName;
 }
 
 function displayer() {
-    var userData = viewInputs();
-    var userDates = akanCalculator();
-    var assignedName = akanNameAssigner();
+	var userData = viewInputs();
+	var userDates = akanCalculator();
+	var assignedName = akanNameAssigner();
 
-    var userName = userData[0];
-    var userDateOfBirth = userDates[0];
+	var userName = userData[0];
+	var userDateOfBirth = userDates[0];
 
-    var greets = "Hello " + "<strong>" + userName + "</strong>";
-    var dateConfirm = "Your were born on: " + userDateOfBirth;
-    var akan = "Your Akan Name is: " + "<strong>" + assignedName + "</strong>";
+	var greets = "Hello " + "<strong>" + userName + "</strong>";
+	var dateConfirm = "Your were born on: " + userDateOfBirth;
+	var akan = "Your Akan Name is: " + "<strong>" + assignedName + "</strong>";
 
-    document.getElementById("greeting").innerHTML = greets;
-    document.getElementById("dob").innerHTML = dateConfirm;
-    document.getElementById("akan_name").innerHTML = akan;
+	document.getElementById("greeting").innerHTML = greets;
+	document.getElementById("dob").innerHTML = dateConfirm;
+	document.getElementById("akan_name").innerHTML = akan;
 }
 
 function clearForm() {
-    document.getElementById("userInputForm").reset();
+	document.getElementById("userInputForm").reset();
 }
+
+

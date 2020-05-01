@@ -1,6 +1,5 @@
 # Project Name
 ## Akan Name Generator
-Akan Moringa Week 2 - IP Project 
 
 # Project Description
 The project is supposed to take in user birthday and generate an Akan name from it. Akan Names are Ghanian names from the AKan people where the name was given depending on the gender and the day of the week they were born.
