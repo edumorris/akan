@@ -147,8 +147,8 @@ function displayer() {
 	var userDateOfBirth = userDates[0];
 
 	var greets = "Hello " + "<strong>" + userName + "</strong>";
-	var dateConfirm = "Your were born on: " + userDateOfBirth;
-	var akan = "Your Akan Name is: " + "<strong>" + assignedName + "</strong>";
+	var dateConfirm = userDateOfBirth;
+	var akan = assignedName;
 
 	document.getElementById("greeting").innerHTML = greets;
 	document.getElementById("dob").innerHTML = dateConfirm;
