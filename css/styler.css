@@ -84,3 +84,10 @@ td[colspan="2"] {
 	font-size: 1.5em;
 	font-family: 'Roboto', sans-serif;
 }
+
+#akan_name {
+	font-size: 2.5em;
+	font-weight: bold;
+	text-shadow: 3px 3px 4px black;
+	margin-top: 10px;
+}

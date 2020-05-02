@@ -141,14 +141,13 @@ function akanNameAssigner() {
 function displayer() {
 	var userData = viewInputs();
 	var userDates = akanCalculator();
-	var assignedName = akanNameAssigner();
+	var akan = akanNameAssigner();
 
 	var userName = userData[0];
 	var userDateOfBirth = userDates[0];
 
 	var greets = "Hello " + "<strong>" + userName + "</strong>";
 	var dateConfirm = userDateOfBirth;
-	var akan = assignedName;
 
 	document.getElementById("greeting").innerHTML = greets;
 	document.getElementById("dob").innerHTML = dateConfirm;
