@@ -15,7 +15,7 @@ function viewInputs() {
 function dayValidator() {
     var dayBirth = document.getElementById("dayOfBirth").value;
     if (dayBirth < 1 || dayBirth > 31) {
-        alert("Enter a valid day");
+        alert("Enter a valid day, between 1 and 31");
         document.getElementById("dayOfBirth").focus();
     }
 }
@@ -23,7 +23,7 @@ function dayValidator() {
 function monthValidator() {
     var monthBirth = document.getElementById("monthOfBirth").value;
     if (monthBirth < 1 || monthBirth > 12) {
-        alert("Enter a valid month");
+        alert("Enter a valid month, between 1 and 12");
         document.getElementById("monthOfBirth").focus();
     }
 }
@@ -141,14 +141,13 @@ function akanNameAssigner() {
 function displayer() {
 	var userData = viewInputs();
 	var userDates = akanCalculator();
-	var assignedName = akanNameAssigner();
+	var akan = akanNameAssigner();
 
 	var userName = userData[0];
 	var userDateOfBirth = userDates[0];
 
 	var greets = "Hello " + "<strong>" + userName + "</strong>";
-	var dateConfirm = "Your were born on: " + userDateOfBirth;
-	var akan = "Your Akan Name is: " + "<strong>" + assignedName + "</strong>";
+	var dateConfirm = userDateOfBirth;
 
 	document.getElementById("greeting").innerHTML = greets;
 	document.getElementById("dob").innerHTML = dateConfirm;

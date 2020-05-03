@@ -20,7 +20,42 @@
   			<h1 class="display-3">Akan Names</h1>
   			<p class="lead">The Akan people of Ghana frequently name their children after the day of the week they were born and the order in which they were born. These "day names" have further meanings concerning the soul and character of the person.</p>
   			<hr class="my-2">
-  			<p class="text-center about">This program shall tell you what your Akan name would be. Kindly enter your details below and the program shall do the rest.</p>
+        <p class="text-center about">This program shall tell you what your Akan name would be. Kindly enter your details below and the program shall do the rest.</p>
+        <br>
+        <p>
+          <table id="akan-table">
+            <tr id="days">
+              <th style="background-color: #746a95;"></th>
+              <th>Sunday</th>
+              <th>Monday</th>
+              <th>Tuesday</th>
+              <th>Wednesday</th>
+              <th>Thursday</th>
+              <th>Friday</th>
+              <th>Saturday</th>
+            </tr>
+            <tr>
+              <th>Female</th>
+              <td>Akosua</td>
+              <td>Adwoa</td>
+              <td>Abenaa</td>
+              <td>Akua</td>
+              <td>Yaa</td>
+              <td>Afua</td>
+              <td>Ama</td>
+            </tr>
+            <tr>
+              <th>Male</th>
+              <td>Kwasi</td>
+              <td>Kwadwo</td>
+              <td>Kwabena</td>
+              <td>Kwaku</td>
+              <td>Yaw</td>
+              <td>Kofi</td>
+              <td>Kwame</td>
+            </tr>
+          </table>
+        </p>
   			<hr>
   			<div id="input_form" d-flex justify-content-center>
 				<form id="userInputForm" onsubmit="openModal()">
@@ -95,7 +130,11 @@
           </div>
           <div class="modal-body">
             <div id="greeting"></div>
+            <br>
+            You were born on:
             <div id="dob"></div>
+            <br>
+            Your Akan name is:
             <div id="akan_name"></div>
           </div>
           <div class="modal-footer">

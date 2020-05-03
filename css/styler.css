@@ -22,6 +22,29 @@ body {
 	font-family: "Roboto", sans-serif;
 }
 
+#akan-table {
+	border: 1px solid black;
+	border-collapse: collapse;
+	width: 80%;
+	margin: 0 auto;
+	border-radius: 25px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1em;
+}
+
+#akan-table tr th, #akan-table tr td {
+	padding: 10px;
+}
+
+#akan-table tr td, #akan-table tr th {
+	border: 1px solid black;
+}
+
+#days th {
+	text-align: center;
+	padding-bottom: 0;
+}
+
 #input_form {
 	display: flex;
 	margin: 30px auto;
@@ -33,6 +56,8 @@ form {
 	padding: 20px;
 	border-radius: 25px;
 	font-family: "Roboto", sans-serif;
+	background-color: white;
+	box-shadow: 10px 10px -15px black;
 }
 
 td[colspan="2"] {
@@ -79,8 +104,16 @@ td[colspan="2"] {
 	border-radius: 10px;
 }
 
+
 .modal-body {
 	text-align: center;
 	font-size: 1.5em;
 	font-family: 'Roboto', sans-serif;
+}
+
+#akan_name {
+	font-size: 2.5em;
+	font-weight: bold;
+	text-shadow: 3px 3px 4px black;
+	margin-top: 10px;
 }
