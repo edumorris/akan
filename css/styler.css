@@ -49,6 +49,14 @@ body {
 	border-top: none;
 }
 
+.td-bottom {
+	border-bottom: none !important;
+}
+
+.td-side-right {
+	border-right: none !important;
+}
+
 #input_form {
 	display: flex;
 	margin: 30px auto;
