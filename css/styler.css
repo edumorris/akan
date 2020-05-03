@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 body {
-	background-color: #746a95;
+	background: url("../images/tribal.jpg") fixed center no-repeat;
+	background-size: cover;
 }
 
 .container h1 {
