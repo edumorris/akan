@@ -23,7 +23,6 @@ body {
 }
 
 #akan-table {
-	border: 1px solid black;
 	border-collapse: collapse;
 	width: 80%;
 	margin: 0 auto;
@@ -43,6 +42,10 @@ body {
 #days th {
 	text-align: center;
 	padding-bottom: 0;
+}
+
+#days .th-top {
+	border-top: none;
 }
 
 #input_form {
