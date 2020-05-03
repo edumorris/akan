@@ -22,6 +22,29 @@ body {
 	font-family: "Roboto", sans-serif;
 }
 
+#akan-table {
+	border: 1px solid black;
+	border-collapse: collapse;
+	width: 80%;
+	margin: 0 auto;
+	border-radius: 25px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1em;
+}
+
+#akan-table tr th, #akan-table tr td {
+	padding: 10px;
+}
+
+#akan-table tr td, #akan-table tr th {
+	border: 1px solid black;
+}
+
+#days th {
+	text-align: center;
+	padding-bottom: 0;
+}
+
 #input_form {
 	display: flex;
 	margin: 30px auto;
