@@ -27,7 +27,6 @@ body {
 	border-collapse: collapse;
 	width: 80%;
 	margin: 0 auto;
-	border-radius: 25px;
 	font-family: 'Roboto', sans-serif;
 	font-size: 1em;
 }
@@ -55,6 +54,27 @@ body {
 
 .td-side-right {
 	border-right: none !important;
+}
+
+.td-side-left {
+	border-left: none !important;
+}
+
+.td-top {
+	border-top: none !important;
+}
+
+#akan-table-small {
+	width: auto;
+	margin: 0 auto;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1em;
+	display: none;
+}
+
+#akan-table-small tr td, #akan-table-small tr th {
+	padding: 5px;
+	border: 1px solid black;
 }
 
 #input_form {

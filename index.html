@@ -56,6 +56,62 @@
               <td class="td-bottom td-side-right">Kwame</td>
             </tr>
           </table>
+
+          <!-- For small devices -->
+          <table id="akan-table-small">
+            <tr>
+              <th class="td-top td-side-left"></th>
+              <th class="td-top">Female</th>
+              <th class="td-top td-side-right">Male</th>
+            </tr>
+            <tr>
+              <th class="td-side-left">Sunday</th>
+              <td>Akosua</td>
+              <td class="td-side-right">Kwasi</td>
+            </tr>
+            <tr>
+              <th class="td-side-left">Monday</th>
+              <td>Adwoa</td>
+              <td class="td-side-right">Kwadwo</td>
+            </tr>
+            <tr>
+              <th class="td-side-left">Tuesday</th>
+              <td>Abenaa</td>
+              <td class="td-side-right">Kwabena</td>
+            </tr>
+            <tr>
+              <th class="td-side-left">Wednesday</th>
+              <td>Akua</td>
+              <td class="td-side-right">Kwaku</td>
+            </tr>
+            <tr>
+              <th class="td-side-left">Thursday</th>
+              <td>Yaa</td>
+              <td class="td-side-right">Yaw</td>
+            </tr>
+            <tr>
+              <th class="td-side-left">Friday</th>
+              <td>Afua</td>
+              <td class="td-side-right">Kofi</td>
+            </tr>
+            <tr>
+              <th class="td-bottom td-side-left">Saturday</th>
+              <td class="td-bottom">Ama</td>
+              <td class="td-side-right td-bottom">Kwame</td>
+            </tr>
+          </table>
+
+          <script>
+            $(window).resize(function() {
+                if ($(window).width() >= 980) { 
+                    $("#akan-table").show();
+                    $("#akan-table-small").hide();
+                } else {
+                    $("#akan-table").hide();
+                    $("#akan-table-small").show();
+                }
+            });
+          </script>
         </p>
   			<hr>
   			<div id="input_form" d-flex justify-content-center>
